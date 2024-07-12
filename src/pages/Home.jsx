@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SideBar from "../components/SideBar";
 import MainSection from "../components/MainSection";
+import Player from "../components/Player";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
             <MainSection />
           </Col>
         </Row>
+      </Container>
+      <Container className="container-fluid">
+        <Player />
       </Container>
     </>
   );
