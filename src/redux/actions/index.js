@@ -1,6 +1,7 @@
 export const ADD_SONGS_TO_ROCK_SECTION = "ADD_SONGS_TO_ROCK_SECTION";
 export const ADD_SONGS_TO_POP_CULTURE_SECTION = "ADD_SONGS_TO_POP_CULTURE_SECTION";
 export const ADD_SONGS_TO_HIP_HOP_SECTION = "ADD_SONGS_TO_HIP_HOP_SECTION";
+export const ADD_SELECTED_IN_PLAYER = "ADD_SELECTED_IN_PLAYER";
 
 export const addSongsToRockSectionAction = (songs) => {
   return { type: ADD_SONGS_TO_ROCK_SECTION, payload: songs };
@@ -14,6 +15,13 @@ export const addSongsToHipHopSectionAction = (songs) => {
   return {
     type: ADD_SONGS_TO_HIP_HOP_SECTION,
     payload: songs,
+  };
+};
+
+export const addSelectedInPlayerAction = (song) => {
+  return {
+    type: ADD_SELECTED_IN_PLAYER,
+    payload: song,
   };
 };
 

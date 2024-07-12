@@ -1,8 +1,17 @@
-import { Col, Image, Row } from "react-bootstrap";
+import { Col, Image } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { addSelectedInPlayerAction } from "../redux/actions";
 
 const SingleSong = ({ song }) => {
+  const dispatch = useDispatch();
+
   return (
-    <Col className="text-center">
+    <Col
+      className="text-center"
+      onClick={() => {
+        dispatch(addSelectedInPlayerAction(song));
+      }}
+    >
       <Image className="img-fluid" src={song.album.cover_medium} alt="track" />
       <p>
         Track: {song.title}
