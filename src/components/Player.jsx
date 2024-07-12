@@ -1,11 +1,25 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 const Player = () => {
+  const selectedSong = useSelector((state) => state.songs.selected);
   return (
     <Row className="h-100">
       <Col lg={10} className="offset-lg-2">
-        <Row className="h-100 flex-column justify-content-center align-items-center">
-          <Col xs={6} md={4} className="playerControls">
+        <Row className="h-100 ">
+          <Col className="d-flex align-items-center" xs={2} md={4}>
+            {selectedSong && (
+              <>
+                <Image className="me-2" style={{ width: "70px" }} src={selectedSong.album.cover_small} />
+                <p className="text-white mb-0">
+                  {selectedSong.title_short}
+                  <br />
+                  {selectedSong.artist.name}
+                </p>
+              </>
+            )}
+          </Col>
+          <Col xs={6} md={4} className="playerControls justify-content-center align-items-center ">
             <div className="d-flex">
               <a href="#">
                 <img src="src\assets\playerbuttons\shuffle.png" alt="shuffle" />
