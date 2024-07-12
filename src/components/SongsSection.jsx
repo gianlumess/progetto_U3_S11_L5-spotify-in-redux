@@ -27,7 +27,9 @@ const SongsSection = () => {
         <Col xs={10}>
           <div id="rock">
             <h2>Rock Classics</h2>
-            {rockSongs && rockSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
+              {rockSongs && rockSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            </Row>
           </div>
         </Col>
       </Row>
@@ -35,7 +37,9 @@ const SongsSection = () => {
         <Col xs={10}>
           <div id="pop">
             <h2>Pop Culture</h2>
-            {popSongs && popSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
+              {popSongs && popSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            </Row>
           </div>
         </Col>
       </Row>
@@ -43,7 +47,9 @@ const SongsSection = () => {
         <Col xs={10}>
           <div id="pop">
             <h2>#HipHop</h2>
-            {hipHopSongs && hipHopSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
+              {hipHopSongs && hipHopSongs.slice(0, 4).map((song) => <SingleSong key={song.id} song={song} />)}
+            </Row>
           </div>
         </Col>
       </Row>
