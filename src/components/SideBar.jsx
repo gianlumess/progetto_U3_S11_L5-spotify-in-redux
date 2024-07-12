@@ -1,3 +1,5 @@
+import { BookFill, HouseDoorFill } from "react-bootstrap-icons";
+
 const SideBar = () => {
   return (
     <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
@@ -21,12 +23,14 @@ const SideBar = () => {
             <ul>
               <li>
                 <a className="nav-item nav-link d-flex align-items-center" href="#">
-                  <i className="bi bi-house-door-fill"></i>&nbsp; Home
+                  <HouseDoorFill style={{ fontSize: "1.5em" }} fill="currentColor" />
+                  &nbsp; Home
                 </a>
               </li>
               <li>
                 <a className="nav-item nav-link d-flex align-items-center" href="#">
-                  <i className="bi bi-book-fill"></i>&nbsp; Your Library
+                  <BookFill style={{ fontSize: "1.5em" }} fill="currentColor" />
+                  &nbsp; Your Library
                 </a>
               </li>
               <li>

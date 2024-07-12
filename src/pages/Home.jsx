@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import SideBar from "../components/SideBar";
 import MainSection from "../components/MainSection";
 import Player from "../components/Player";
@@ -6,7 +6,7 @@ import Player from "../components/Player";
 const Home = () => {
   return (
     <>
-      <Container className="container-fluid">
+      <div className="container-fluid">
         <Row>
           <Col xs={2}>
             <SideBar />
@@ -15,10 +15,10 @@ const Home = () => {
             <MainSection />
           </Col>
         </Row>
-      </Container>
-      <Container className="container-fluid">
+      </div>
+      <div className="container-fluid fixed-bottom bg-container pt-1">
         <Player />
-      </Container>
+      </div>
     </>
   );
 };
