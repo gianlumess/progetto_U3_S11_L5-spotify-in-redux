@@ -1,16 +1,29 @@
-export const ADD_SONGS_TO_ARRAY = "ADD_SONGS_TO_ARRAY";
+export const ADD_SONGS_TO_ROCK_SECTION = "ADD_SONGS_TO_ROCK_SECTION";
+export const ADD_SONGS_TO_POP_CULTURE_SECTION = "ADD_SONGS_TO_POP_CULTURE_SECTION";
+export const ADD_SONGS_TO_HIP_HOP_SECTION = "ADD_SONGS_TO_HIP_HOP_SECTION";
 
-export const addSongsToArrayAction = (songs) => {
-  return { type: ADD_SONGS_TO_ARRAY, payload: songs };
+export const addSongsToRockSectionAction = (songs) => {
+  return { type: ADD_SONGS_TO_ROCK_SECTION, payload: songs };
 };
 
-export const getSongsAction = (artistName) => {
+export const addSongsToPopCultureSectionAction = (songs) => {
+  return { type: ADD_SONGS_TO_POP_CULTURE_SECTION, payload: songs };
+};
+
+export const addSongsToHipHopSectionAction = (songs) => {
+  return {
+    type: ADD_SONGS_TO_HIP_HOP_SECTION,
+    payload: songs,
+  };
+};
+
+export const getSongsAction = (artistName, storeSection) => {
   return async (dispatch) => {
     try {
       const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
       if (response.ok) {
         const { data } = await response.json();
-        dispatch(addSongsToArrayAction(data));
+        dispatch(storeSection(data));
       } else {
         alert("Error fetching results");
       }
