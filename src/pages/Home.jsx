@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div className="container-fluid">
         <Row>
-          <Col xs={2}>
+          <Col className="d-none d-md-inline-block">
             <SideBar />
           </Col>
           <Col xs={12} md={9} className="offset-md-3 mainPage">

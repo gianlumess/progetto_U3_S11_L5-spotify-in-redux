@@ -6,9 +6,9 @@ import {
 } from "../actions";
 
 const initialState = {
-  rock: null,
-  popCulture: null,
-  hipHop: null,
+  rock: [],
+  popCulture: [],
+  hipHop: [],
   selected: null,
   liked: [],
 };

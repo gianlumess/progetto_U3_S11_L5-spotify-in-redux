@@ -7,6 +7,7 @@ const SingleSong = ({ song }) => {
 
   return (
     <Col
+      style={{ cursor: "pointer" }}
       className="text-center"
       onClick={() => {
         dispatch(addSelectedInPlayerAction(song));

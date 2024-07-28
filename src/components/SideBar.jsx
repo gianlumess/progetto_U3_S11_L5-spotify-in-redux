@@ -52,7 +52,10 @@ const SideBar = () => {
         <button className="btn login-btn" type="button">
           Login
         </button>
-        <a href="#">Cookie Policy</a> |<a href="#"> Privacy</a>
+        <a className="d-inline-block" href="#">
+          Cookie Policy
+        </a>
+        |<a href="#"> Privacy</a>
       </div>
     </nav>
   );
